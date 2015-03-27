@@ -2,7 +2,7 @@
 
  [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-### Changes the elements background-color alpha channel while scrolling towards targeted element.
+### Changes an elements background-color alpha channel while scrolling towards targeted element.
 
 ***
 
