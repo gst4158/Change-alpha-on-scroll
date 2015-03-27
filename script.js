@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 
-    // make position sensitive to size and document's width		
+    	// do stuff on scroll	
 	$(window).on("scroll",function(e){
 		// Fade color on scroll
 		//-------------------------------//
