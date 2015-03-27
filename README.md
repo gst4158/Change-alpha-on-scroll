@@ -6,7 +6,7 @@
 
 ***
 
-### [→ CodePen Demo ←](http://codepen.io/anon/pen/myoyqb)
+### [→ CodePen Demo ←](http://codepen.io/anon/pen/pvYJgK)
 ### [→ Demo File ←](http://github.com/gst4158/Change-alpha-on-scroll/blob/master/index.html)
 ***
 
