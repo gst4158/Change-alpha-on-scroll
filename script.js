@@ -17,7 +17,7 @@ $(document).ready(function() {
 	function changeAlphaBG() {
 		
 		//variable creation
-		var targeted 		= $('#content div:nth-child(1)'); 	//targeted element to finish animation
+		var targeted 		= $('#content div:nth-child(2)'); 	//targeted element to finish animation
 		var overlayWrap		= $('#cover div.overlay'); 		//overlay element which is doing the animation
 		var targetOpacity 	= .75; 					//Set max opacity value you want to use
 
