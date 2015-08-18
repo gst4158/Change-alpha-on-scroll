@@ -50,14 +50,14 @@ $(document).ready(function() {
 		//variable creation
 		var finshedTarget 	= $('#content'); 		//targeted element to finish animation
 		var animatedElm		= $('#cover .textwrapper'); 	//overlay element which is doing the animation
-		var targetOpacity 	= .75; 				//Set max opacity value you want to use
+		var targetOpacity 	= 0; 				//Set max opacity value you want to use
 		
 		//gets distance from top of window for selected element
 		var scrollPos = $(this).scrollTop();
 		elementOffset = finshedTarget.offset().top;
 			
 		//gets the final position so we can do some conditional logic
-		var percentage = (scrollPos/elementOffset).toFixed(2);
+		var percentage = (1 - scrollPos/elementOffset).toFixed(2);
 				
 		//conditional for target opacity
 		//checks users current place in document and creates a % distance away from targeted element		
