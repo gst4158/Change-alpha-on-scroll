@@ -13,6 +13,7 @@ $(document).ready(function() {
 	});
 
 	// Fade color on scroll
+	// Counts up from 0 -> 100
 	//-------------------------------//
 	function changeAlphaBG() {
 		
@@ -40,6 +41,31 @@ $(document).ready(function() {
 		overlayWrap.css('opacity', opacity);
 	};
 
+
+	// Fade color on scroll
+	// Counts down from 1 -> 0
+	//-------------------------------//
+	function changeAlphaBGDown() {
+		
+		//variable creation
+		var finshedTarget 	= $('#content'); 		//targeted element to finish animation
+		var animatedElm		= $('#cover .textwrapper'); 	//overlay element which is doing the animation
+		var targetOpacity 	= .75; 				//Set max opacity value you want to use
+		
+		//gets distance from top of window for selected element
+		var scrollPos = $(this).scrollTop();
+		elementOffset = finshedTarget.offset().top;
+			
+		//gets the final position so we can do some conditional logic
+		var percentage = (scrollPos/elementOffset).toFixed(2);
+				
+		//conditional for target opacity
+		//checks users current place in document and creates a % distance away from targeted element		
+		percentage >= targetOpacity ? targetOpacity = percentage : targetOpacity;
+
+		//changes opacity based off of conditional
+		animatedElm.css({ 'opacity' : targetOpacity });
+	};
 
 
 
