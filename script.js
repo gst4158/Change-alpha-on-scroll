@@ -67,7 +67,30 @@ $(document).ready(function() {
 		animatedElm.css({ 'opacity' : targetOpacity });
 	};
 
+	function changeAlpha(animatedElm, finshedTarget, targetOpacity, rule, secondaryProp) {
+		//check for null values
+		targetOpacity	= targetOpacity || 0;
+		rule 		= rule || 'opacity';
+		secondaryProp 	= secondaryProp || '';
+		
+		//gets distance from top of window for selected element
+		var scrollPos 		= $(this).scrollTop();
+		var targetHeight 	= $(animatedElm).outerHeight(true)+100;
+		var elementOffset 	= (finshedTarget.offset().top)-targetHeight;
+			
+		//gets the final position so we can do some conditional logic
+		var percentage = (1 - scrollPos/elementOffset).toFixed(2);
+				
+		//conditional for target opacity
+		//checks users current place in document and creates a % distance away from targeted element		
+		percentage >= targetOpacity ? targetOpacity = percentage : targetOpacity;
 
+		//gets the correct rule we want to use		
+		var secondaryProp = (secondaryProp ? secondaryProp+'('+targetOpacity+')' : targetOpacity);
+
+		//changes opacity based off of conditional
+		animatedElm.css(rule, secondaryProp);
+	};
 
 
 });
