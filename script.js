@@ -67,6 +67,10 @@ $(document).ready(function() {
 		animatedElm.css({ 'opacity' : targetOpacity });
 	};
 
+	// Custom CSS change on scroll
+	// Defaults to opacity, but you can choose other rules such as transform with the secondary property scale
+	// example: changeAlpha( $('.textwrapper'), $('.column'), 0, 'transform', 'scale');
+	//-------------------------------//
 	function changeAlpha(animatedElm, finshedTarget, targetOpacity, rule, secondaryProp) {
 		//check for null values
 		targetOpacity	= targetOpacity || 0;
